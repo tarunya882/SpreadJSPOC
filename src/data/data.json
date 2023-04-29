@@ -1,0 +1,31 @@
+[
+    { 
+        "Name": "Diary Of  Girl",
+        "Category": "Autobiography",
+        "Price": 109, 
+        "Author": "Wal-Mart",
+        "Mail-id": "anne@gmail.com"
+    },
+    { 
+        "Name": "Harry Potter",
+        "Category": "Fiction",
+        "Price": -100000000000000000000000.00, 
+        "Author": "J.K.Rowling",
+        "Mail-id": "rowling@gmail.commmmmmmmmmmmmmmmm"
+    },
+    { 
+        "Name": "Mpby-Dick",
+        "Category": "Drama",
+        "Price": 200, 
+        "Author": "James Clear",
+        "Mail-id": "james@gmail.com"
+    },
+    { 
+        "Name": "Casual Vacancy",
+        "Category": "Thriller",
+        "Price": 200, 
+        "Author": "J.K.Rowling",
+        "Mail-id": "rowling@gmail.com"
+    }
+
+]

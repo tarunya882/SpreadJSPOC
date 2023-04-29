@@ -1,0 +1,31 @@
+[
+    { 
+        "Name": "Diary Of Young Girl",
+        "Category": "Autobiography",
+        "Price": 100, 
+        "Author": "Wal-Mart"
+       
+    },
+    { 
+        "Name": "Harry Potter",
+        "Category": "Fiction",
+        "Price": 100, 
+        "Author": "J.K.Rowling"
+       
+    },
+    { 
+        "Name": "Mpby-Dick",
+        "Category": "Drama",
+        "Price": 200, 
+        "Author": "James Clear"
+       
+    },
+    { 
+        "Name": "Casual Vacancy",
+        "Category": "Thriller",
+        "Price": 200, 
+        "Author": "J.K.Rowling"
+       
+    }
+
+]
