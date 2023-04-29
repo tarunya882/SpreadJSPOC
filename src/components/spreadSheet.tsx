@@ -82,15 +82,15 @@ function SpreadSheet(props:SpreadSheetProps) {
        infos.sheet.getCell(infos.row,infos.col).foreColor(theme.palette.text.secondary);
     });
 
-    // activeSheet.bind(GC.Spread.Sheets.Events.CellDoubleClick, 
-    //     function (sender:any, args:any) 
-    //     {
-    //         if(args.sheetArea === GC.Spread.Sheets.SheetArea.viewport)
-    //         {
-    //             args.sheet.getCell(args.row,args.col).foreColor(theme.palette.grey[200]);
-    //             console.log("The column header was clicked.");
-    //         }
-    // });
+    activeSheet.bind(GC.Spread.Sheets.Events.CellDoubleClick, 
+        function (sender:any, args:any) 
+        {
+            if(args.sheetArea === GC.Spread.Sheets.SheetArea.viewport)
+            {
+                args.sheet.getCell(args.row,args.col).foreColor(theme.palette.grey[200]);
+                console.log("The column header was clicked.");
+            }
+    });
 
     activeSheet.bind(GC.Spread.Sheets.Events.CellClick, 
 
@@ -102,7 +102,7 @@ function SpreadSheet(props:SpreadSheetProps) {
                args.sheet.getCell(args.row,args.col).foreColor("red");
                // console.log("The column header was clicked.");
                var cell = args.sheet.getCell(args.row,args.col);
-              // cell.borderLeft(new GC.Spread.Sheets.LineBorder("red", GC.Spread.Sheets.LineStyle.thick));
+              cell.borderLeft(new GC.Spread.Sheets.LineBorder("red", GC.Spread.Sheets.LineStyle.thick));
             }
     });
 
@@ -113,7 +113,7 @@ function SpreadSheet(props:SpreadSheetProps) {
     activeSheet.setValue(1, 0, "Book Details", GC.Spread.Sheets.SheetArea.colHeader);
     activeSheet.setValue(1, 3, "Author Details", GC.Spread.Sheets.SheetArea.colHeader);
     activeSheet.addColumns(0,1);
-  //  activeSheet.addRows(5,1);
+   activeSheet.addRows(5,1);
     activeSheet.setValue(1, 0, {info:"Cash flow categories"}, GC.Spread.Sheets.SheetArea.colHeader);
     console.log(activeSheet.getCell(1,0).value);
     activeSheet.setValue(2, 0, "", GC.Spread.Sheets.SheetArea.colHeader);
@@ -130,14 +130,14 @@ function SpreadSheet(props:SpreadSheetProps) {
     console.log("daa",tdata);
 activeSheet.bind(GC.Spread.Sheets.Events.EditStarting, function (sender:any, args:any) 
 {  
-    // var cell = args.sheet.getCell(args.row,args.col);
-    // cell.borderLeft(new GC.Spread.Sheets.LineBorder("Blue", GC.Spread.Sheets.LineStyle.thick));
-    // cell.borderTop(new GC.Spread.Sheets.LineBorder("Blue", GC.Spread.Sheets.LineStyle.double));
-    // cell.borderRight(new GC.Spread.Sheets.LineBorder
-    // ("Blue", GC.Spread.Sheets.LineStyle.dashDot));
-    // cell.borderBottom(new GC.Spread.Sheets.LineBorder
-    // ("Blue", GC.Spread.Sheets.LineStyle.mediumDashed));
-    // console.log(cell);
+    var cell = args.sheet.getCell(args.row,args.col);
+    cell.borderLeft(new GC.Spread.Sheets.LineBorder("Blue", GC.Spread.Sheets.LineStyle.thick));
+    cell.borderTop(new GC.Spread.Sheets.LineBorder("Blue", GC.Spread.Sheets.LineStyle.double));
+    cell.borderRight(new GC.Spread.Sheets.LineBorder
+    ("Blue", GC.Spread.Sheets.LineStyle.dashDot));
+    cell.borderBottom(new GC.Spread.Sheets.LineBorder
+    ("Blue", GC.Spread.Sheets.LineStyle.mediumDashed));
+    console.log(cell);
 });
 
 
@@ -193,7 +193,7 @@ activeSheet.getCell(0,1).wordWrap(true);
       activeSheet.setRowHeight(i,35.0,GC.Spread.Sheets.SheetArea.viewport);
     }
     for(var i=0;i<colCount;i++){
-      // activeSheet.setColumnWidth(i,150.0,GC.Spread.Sheets.SheetArea.viewport);
+      activeSheet.setColumnWidth(i,150.0,GC.Spread.Sheets.SheetArea.viewport);
       activeSheet.setStyle(1, i+1, style1, GC.Spread.Sheets.SheetArea.colHeader);
       //activeSheet.setStyle(2, i+1, style2, GC.Spread.Sheets.SheetArea.colHeader);
       activeSheet.setStyle(2, i+1, defaultstyle1, GC.Spread.Sheets.SheetArea.colHeader);

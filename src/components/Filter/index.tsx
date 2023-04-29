@@ -94,78 +94,77 @@ const FilterComponent = () => {
     setCurrency(event.target.value);
   };
   return (
-    <div></div>
-    // <div className={classes.root}>
-    //   {/* <Grid container style={{ display: "grid", padding: "17px" }}>
-    //     {/* <Grid */}
-    //       {/* // xs={5}
-    //       spacing={0}
-    //       direction={"column"}
-    //       alignItems={"flex-start"}
-    //       justifyContent={"center"}
-    //     > */}
-    //       <Box width="100%" marginLeft="4px">
-    //         <Typography variant="h3" className={classes.header} noWrap>
-    //           Filters
-    //         </Typography>
-    //       </Box>
-    //       <Divider
-    //         variant="fullWidth"
-    //         style={{ backgroundColor: "#F5B873", border: "1px solid #F5B873" }}
-    //       />
-    //     </Grid>
-    //     <Grid className={classes.middle}>
-    //       <Grid container>
-    //         <DropDown
-    //           items={items}
-    //           className={classes.rowDropDown}
-    //           selectedId={countryCode}
-    //           onChange={onCountryChange}
-    //           testId="dropDown"
-    //           placeHolderText={"Country Code"}
-    //         />
-    //         {/* <EditIcon />
-    //         <DeleteIcon /> */}
-    //       </Grid>
-    //       <Grid container>
-    //         <DropDown
-    //           items={items}
-    //           className={classes.rowDropDown2}
-    //           selectedId={region}
-    //           onChange={onRegionChange}
-    //           testId="dropDown"
-    //           placeHolderText={"Region"}
-    //         />
-    //       </Grid>
-    //       <Grid container>
-    //         <DropDown
-    //           items={items}
-    //           className={classes.rowDropDown2}
-    //           selectedId={currency}
-    //           onChange={onCurrencyChange}
-    //           testId="dropDown"
-    //           placeHolderText={"Currency"}
-    //         />
-    //       </Grid>
-    //     </Grid>
-    //     <Grid>
-    //       <Grid container justifyContent="flex-end">
-    //         <Button
-    //           style={{ marginRight: "8px", color: "#18b0f1f2" }}
-    //           variant="text"
-    //         >
-    //           Reset
-    //         </Button>
-    //         <Button
-    //           style={{ backgroundColor: "#fc7500", color: "#FFFFFF" }}
-    //           title="Save Filter"
-    //         >
-    //           Save Filter
-    //         </Button>
-    //       </Grid>
-    //     </Grid> */}
-    //   {/* /</Grid> */}
-    // </div>
+    <div className={classes.root}>
+      <Grid container style={{ display: "grid", padding: "17px" }}>
+        <Grid
+          xs={5}
+          spacing={0}
+          direction={"column"}
+          align-items={"flex-start"}
+          justify-content={"center"}
+        >
+          <Box width="100%" marginLeft="4px">
+            <Typography variant="h3" className={classes.header} noWrap>
+              Filters
+            </Typography>
+          </Box>
+          <Divider
+            variant="fullWidth"
+            style={{ backgroundColor: "#F5B873", border: "1px solid #F5B873" }}
+          />
+        </Grid>
+        <Grid className={classes.middle}>
+          <Grid container>
+            <DropDown
+              items={items}
+              className={classes.rowDropDown}
+              selectedId={countryCode}
+              onChange={onCountryChange}
+              testId="dropDown"
+              placeHolderText={"Country Code"}
+            />
+            {/* <EditIcon />
+            <DeleteIcon /> */}
+          </Grid>
+          <Grid container>
+            <DropDown
+              items={items}
+              className={classes.rowDropDown2}
+              selectedId={region}
+              onChange={onRegionChange}
+              testId="dropDown"
+              placeHolderText={"Region"}
+            />
+          </Grid>
+          <Grid container>
+            <DropDown
+              items={items}
+              className={classes.rowDropDown2}
+              selectedId={currency}
+              onChange={onCurrencyChange}
+              testId="dropDown"
+              placeHolderText={"Currency"}
+            />
+          </Grid>
+        </Grid>
+        <Grid>
+          <Grid container justify-content="flex-end">
+            <Button
+              style={{ marginRight: "8px", color: "#18b0f1f2" }}
+              variant="text"
+            >
+              Reset
+            </Button>
+            <Button
+              style={{ backgroundColor: "#fc7500", color: "#FFFFFF" }}
+              title="Save Filter"
+            >
+              Save Filter
+            </Button>
+          </Grid>
+        </Grid> 
+      </Grid> 
+    </div>
   );
 };
 

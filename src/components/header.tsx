@@ -168,4 +168,3 @@ export default function PrimarySearchAppBar() {
     </div>
   );
 }
-https://trends.ajio.com/aurelia-foil-print-anarkali-kurta-suit-set-with-dupatta/p/441200957_green
